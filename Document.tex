@@ -1,0 +1,530 @@
+%definición del artículo
+\documentclass[a4paper,12pt,openany,oneside]{book}
+\usepackage[left=5cm,right=2cm,top=4cm,bottom=4cm,paperwidth=216mm,paperheight=330mm,pdftex]{geometry}
+%paquete usado para silabación en español
+\usepackage[spanish]{babel}
+%codificación del documento
+\usepackage[utf8]{inputenc}
+%espaciado
+\linespread{1.5}
+%identación de párrafo
+\setlength{\parindent}{20pt}
+%espaciado de párrafo
+\setlength{\parskip}{4ex plus 0.5ex minus 0.2ex}
+%para validar sólo sintaxis sin compilar
+%\usepackage{syntonly}
+%\syntaxonly
+%para usar imágenes
+\usepackage{graphicx}
+%para usar fragmentos de codigo fuente
+\usepackage{listings}
+\usepackage{float}
+\usepackage{verbatim} %comentarios
+\usepackage{multirow} %multi columna
+\floatstyle{boxed}
+\newfloat{codigo}{thp}{lop}
+\floatname{codigo}{Caja de Código}
+%comienzo del documento
+\begin{document}
+\thispagestyle{empty}
+\begin{center}
+\textbf{UNIVERSIDAD TECNOLÓGICA METROPOLITANA\\
+ESCUELA DE INFORMÁTICA}\\
+\vspace{3cm}
+PERSONAL SOFTWARE PROCESS - CUADERNO DE INGENIERIA
+\end{center}
+\begin{flushright}
+DOCUMENTACIÓN DESTINADA\\
+PARA LA IMPLEMENTACIÓN\\
+DE LA METODOLOGÍA PSP.\\
+\vspace{3cm}
+PROFESOR GUÍA: Sebastián Salazar\\
+\vspace{1.5cm}
+Miguel Angel Aníbal Davor Fuenzalida Pino\\
+anibaldavor@gmail.com
+\end{flushright}
+\vspace{4cm}
+\begin{center}
+SANTIAGO - 2012
+\end{center}
+\newpage
+\thispagestyle{empty}
+\begin{flushright}
+\vspace{20mm}
+Nota: \line(1, 0){140} \\
+\vspace{30 mm}
+\line(1, 0){180}\\	
+Firma y Timbre\\
+Autoridad Responsable
+\end{flushright}
+\chapter*{Resumen}
+\thispagestyle{empty}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla quam, consequat in viverra sed, mollis gravida nisi. Proin consequat urna ac nisl dignissim elementum. Suspendisse quam magna, tempus id suscipit sed, laoreet ut lacus. Praesent convallis tortor in felis feugiat volutpat ac sed dui. Ut vel augue nulla. Vivamus pulvinar ultrices cursus. Phasellus consequat convallis auctor.
+
+Quisque at diam quis nulla egestas varius non id sem. Aliquam metus neque, porttitor in malesuada non, auctor ut nulla. In sed ipsum purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et ipsum non massa vestibulum tincidunt. Sed ipsum lacus, convallis at egestas nec, interdum ut ipsum. Pellentesque at massa ut urna vulputate ullamcorper.
+\tableofcontents
+%\listoffigures
+\chapter*{Introducción}
+\thispagestyle{empty}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla quam, consequat in viverra sed, mollis gravida nisi. Proin consequat urna ac nisl dignissim elementum. Suspendisse quam magna, tempus id suscipit sed, laoreet ut lacus. Praesent convallis tortor in felis feugiat volutpat ac sed dui. Ut vel augue nulla. Vivamus pulvinar ultrices cursus. Phasellus consequat convallis auctor.
+
+Quisque at diam quis nulla egestas varius non id sem. Aliquam metus neque, porttitor in malesuada non, auctor ut nulla. In sed ipsum purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec et ipsum non massa vestibulum tincidunt. Sed ipsum lacus, convallis at egestas nec, interdum ut ipsum. Pellentesque at massa ut urna vulputate ullamcorper.
+\chapter{El Trabajo del Ingeniero de Sofware}
+\thispagestyle{empty}
+\section{Análisis}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla quam, consequat in viverra sed, mollis gravida nisi. Proin consequat urna ac nisl dignissim elementum. Suspendisse quam magna, tempus id suscipit sed, laoreet ut lacus. Praesent convallis tortor in felis feugiat volutpat ac sed dui. Ut vel augue nulla. Vivamus pulvinar ultrices cursus. Phasellus consequat convallis auctor.
+\section{Desarrollo}
+\begin{tabular}{|l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Frecuencia (semanal)} & \textbf{Tiempo (minutos)} \\
+\hline
+Leer libros de texto & todos & 840/semana\\
+\hline
+Desarrollo & todos & 1260\\
+\hline
+Programar & todos & 2520\\
+\hline
+Reuniones & L, M, J & 420/semana\\
+\hline
+Reparar Documentos & Mi, V & 840/semana\\
+\hline
+\end{tabular}
+\chapter{La Gestión del Tiempo}
+\thispagestyle{empty}
+\section{Análisis}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla quam, consequat in viverra sed, mollis gravida nisi. Proin consequat urna ac nisl dignissim elementum. Suspendisse quam magna, tempus id suscipit sed, laoreet ut lacus. Praesent convallis tortor in felis feugiat volutpat ac sed dui. Ut vel augue nulla. Vivamus pulvinar ultrices cursus. Phasellus consequat convallis auctor.
+\section{Desarrollo}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla quam, consequat in viverra sed, mollis gravida nisi. Proin consequat urna ac nisl dignissim elementum. Suspendisse quam magna, tempus id suscipit sed, laoreet ut lacus. Praesent convallis tortor in felis feugiat volutpat ac sed dui. Ut vel augue nulla. Vivamus pulvinar ultrices cursus. Phasellus consequat convallis auctor.
+\chapter{El Control del Tiempo}
+\thispagestyle{empty}
+\section{Análisis}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nulla quam, consequat in viverra sed, mollis gravida nisi. Proin consequat urna ac nisl dignissim elementum. Suspendisse quam magna, tempus id suscipit sed, laoreet ut lacus. Praesent convallis tortor in felis feugiat volutpat ac sed dui. Ut vel augue nulla. Vivamus pulvinar ultrices cursus. Phasellus consequat convallis auctor.
+\section{Desarrollo}
+\begin{tabbing}
+Estudiante: \= Miguel Angel Fuenzaldia Pino \= Fecha: \= 9/10/2012\\
+Profesor: \> Sebastián Salazar Molina \>   \>  \\
+\end{tabbing}
+\begin{tabular}{| l | l | l | l | l | l | l | l | l |}
+\hline
+\textbf{Fecha} & \textbf{Comienzo} & \textbf{Fin} & \textbf{Interrup.} & \textbf{Delta} & \textbf{Actividad} & \textbf{Comentarios} & \textbf{C} & \textbf{U} \\
+\hline
+19/11 & 10:56 & 11:17 & & 20 & Desarrollo & notebook & X & 1 \\
+\hline
+      & 11:18 & 11:35 & & 15 & lectura & psp & X & 1 \\
+\hline
+      & 11:35 & 12:29 & 2+5 & 50 & Desarrollo & notebook & X & 1 \\
+\hline
+      & 12:30 & 12:56 & & 30 & lectura & psp & X & 1 \\
+\hline
+      & 12:57 & 13:02 & & 5 & Desarrollo & notebook & X & 1 \\
+\hline
+      & 13:02 & 13:29 & & 30 & Almorzar & olgura & X & 1 \\
+\hline
+      & 13:30 & 15:21 & & 120 & Desarrollo & notebook & X & 1 \\
+\hline
+      & 15:22 & 16:12 & & 45 & lectura & psp & X & 1 \\
+\hline
+      & 15:22 & 16:00 & & 40 & Desarrollo & notebook & X & 1 \\
+\hline   
+20/11 & 16:00 & 17:00 & & 60 & Desarrollo & notebook & X & 1 \\
+\hline
+      & 17:00 & 18:26 & & 90 & lectura & psp & X & 1 \\
+\hline
+      & 18:30 & 19:00 & & 30 & Desarrollo & notebook & X & 1 \\
+\hline 
+21/11 & 18:00 & 18:30 & & 30 & lectura & psp & X & 1 \\
+\hline
+      & 18:30 & 19:00 & & 30 & Desarrollo & notebook & X & 1 \\
+\hline 
+26/11 & 15:00 & ... & & ... & Desarrollo & notebook & X & 1 \\
+\hline
+\end{tabular}
+\chapter{Planificación de Períodos y Productos}
+\thispagestyle{empty}
+\section{Análisis}
+Este apartado se preocupa de la planificación semanal del tiempo, en la parte de desarrollo se tienen 3 tablas que nos permiten llevar los registros totales de tiempo en minutos de las actividades que hago durante la semana. La primera tabla muestra las sumas de los tiempos, la segunda muestra la actividad de las semanas pasadas y la tercera muestra el total de las semanas hasta hoy en día.
+\section{Desarrollo}
+\newpage
+\textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Reunion} & \textbf{Codificar} & \textbf{Escribir} & \textbf{Leer} & \textbf{Total} \\
+\hline
+\textbf{Fecha} &                  & \textbf{Programas} & \textbf{Textos} & \textbf{textos} & \\
+\hline
+D 18/11 & & & & & \\
+\hline
+L & & & & & \\
+\hline
+M & & & & & \\
+\hline
+Mi & & & & & \\
+\hline
+J & & & & & \\
+\hline
+V & & & & & \\
+\hline
+S & & & & & \\
+\hline
+\textbf{Totales} & & & & & \\
+\hline
+\end{tabular}
+\\
+Tiempos y Medias del Período, Número de Semanas (número anterior +1): 1\\
+Resumen de las semanas anteriores:\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Total} & & & & & \\
+\hline
+\textbf{Med.} & & & & & \\
+\hline
+\textbf{Máx} & & & & & \\
+\hline
+\textbf{Mín} & & & & & \\
+\hline
+\end{tabular}
+\\
+Resumen de las semanas totales (anteriores mas última)\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Total} & & & & & \\
+\hline
+\textbf{Med.} & & & & & \\
+\hline
+\textbf{Máx} & & & & & \\
+\hline
+\textbf{Mín} & & & & & \\
+\hline
+\end{tabular}
+\chapter{La Planificación del Producto}
+\thispagestyle{empty}
+\section{Análisis}
+El desarrollo del proyecto requiere un cuaderno que registre la actividad en función de los trabajos que se van realizando, para lo cual se tiene un cuaderno de trabajos que registra las actividades con sus respectivas estimaciones de tiempo, sacadas de datos anteriores. Recordar que en esta tabla se anotan los trabajos que son las actividades diarias, asi que se anota uno al día.
+\section{Desarrollo}
+\newpage
+\textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Trab} & \textbf{Fecha} & \textbf{Pro} & \multicolumn{2}{|c|}{\textbf{Estimado}} & \multicolumn{3}{|c|}{\textbf{Real}} & \multicolumn{5}{|c|}{\textbf{Hasta la Fecha}} \\
+\hline
+ & & & \textbf{Tie} & \textbf{Uni} & \textbf{Tie} & \textbf{Uni} & \textbf{Vel} & \textbf{Tie} & \textbf{Uni} & \textbf{Vel} & \textbf{Máx} & \textbf{Mín} \\
+\hline
+\multirow{2}{*}{1} & 19/11 & Escr. & 420 & 1 & 300 & 2 & 150 & 300 & 2 & 150 & 150 & 150 \\
+\cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:} Escribir el Engineer Notebook para los capitulos 5 al 12}\\
+\hline
+\multirow{2}{*}{2} & 20/11 & Escr. & 420 & 1 & 300 & 2 & 150 & 300 & 2 & 150 & 150 & 150 \\
+\cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:} Escribir el Engineer Notebook para los capitulos 7 al 16}\\
+\hline
+\multirow{2}{*}{n} & & & & & & & & & & & & \\
+\cline{2-13} & \multicolumn{12}{|l|}{\textbf{Descripción:}}\\
+\hline
+\end{tabular}
+\chapter{El Tamaño del Producto}
+\thispagestyle{empty}
+\section{Análisis}
+Para estimar los costes de tiempo y valor de cada actividad que representa parte del desarrollo del un producto como tal, es necesario establecer formas de medición para valores que pueden ser cuantificables en unidades de trabajo. Para lo cual en esta actividad de mostrarán Estimaciones de tamaños para las actividades particulares de este proyecto.
+\section{Desarrollo}
+\newpage
+\begin{tabbing}
+\textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
+\textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
+\end{tabbing}
+\textbf{Reunión}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Persona} & \textbf{Tiempo} & \textbf{Temas} & \textbf{Tiempo x Tema}\\
+\hline
+Sebastián Salazar & 60 & 4 & 15\\
+\hline
+\textbf{Totales} & 60 & 4 & 15 \\
+\hline
+\textbf{Medias} & 60 & 4 & 15 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Lectura}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Capítulo} & \textbf{Tiempo} & \textbf{Páginas} & \textbf{Tiempo x Página}\\
+\hline
+1-5   & 180 & 50 & 3,6 \\
+\hline
+6-10  & & & \\
+\hline
+11-15 & & & \\
+\hline
+16-20 & & & \\
+\hline
+\textbf{Totales} & 180 & 50 & 3,6 \\
+\hline
+\textbf{Medias} & 180 & 50 & 3,6 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Escribir}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Documento} & \textbf{Tiempo} & \textbf{Páginas} & \textbf{Tiempo x Página}\\
+\hline
+PSP & 360 & 30 & 20 \\
+\hline
+Bitácora & 10 & 1 & 10 \\
+\hline
+Título & & & \\
+\hline
+\textbf{Totales} & 370 & 31 & 30 \\
+\hline
+\textbf{Medias} & 135 & 15,5 & 15 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Programar}\\
+\begin{tabular}{| l | l | l | l | l | l | l |}
+\hline
+\textbf{Programa} & \textbf{LOC} & \textbf{Func. Anteriores} & \textbf{Func. Hasta} & \textbf{Mín} & \textbf{Media} & \textbf{Máx}\\
+\hline
+Modelo & & & & & & \\
+\hline
+Control & & & & & & \\
+\hline
+Vista & & & & & & \\
+\hline
+\textbf{Totales} & & & & & & \\
+\hline
+\textbf{Medias} & & & & & & \\
+\hline
+\end{tabular}
+\chapter{La Gestión del Tiempo}
+\thispagestyle{empty}
+\section{Análisis}
+Para poder desarrollar las actividades, se nesesita tiempo, por lo cual resulta importante el manejarlo apropiadamente, para esto se hace una estimación aproximada del tiempo que consumirá la ejecución de las actividades relacionadas con el desarrollo del trabajo que esta en curso. Se expondrán dos tablas y un marco de referencias para las aproximaciones futuras.
+\section{Desarrollo}
+\newpage
+\begin{tabbing}
+\textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
+\textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
+\end{tabbing}
+\textbf{Toma de Requerimientos y Preparación de Engineer Notebook}\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Reunion} & \textbf{Codificar} & \textbf{Escribir} & \textbf{Leer} & \textbf{Total} \\
+\hline
+\textbf{Fecha} &                  & \textbf{Programas} & \textbf{Textos} & \textbf{textos} & \\
+\hline
+D  &    & & 180 & 180 & 360 \\
+\hline
+L  & 60 & & 180 & 180 & 420 \\
+\hline
+M  &    & & 180 & 180 & 360 \\
+\hline
+Mi & 60 & & 180 & 180 & 420 \\
+\hline
+J  &    & & 180 & 180 & 360 \\
+\hline
+V  & 60 & & 180 & 180 & 420 \\
+\hline
+S  &    & & 180 & 180 & 360 \\
+\hline
+\textbf{Totales} & 180 & & 1260 & 1260 & 1440 \\
+\hline
+\end{tabular}
+\\\\
+\textbf{Etapa de desarrollo de Proyecto e Informe}\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Tarea} & \textbf{Reunion} & \textbf{Codificar} & \textbf{Escribir} & \textbf{Leer} & \textbf{Total} \\
+\hline
+\textbf{Fecha} &                  & \textbf{Programas} & \textbf{Textos} & \textbf{textos} & \\
+\hline
+D  &    & 180 & 180 &  & 360 \\
+\hline
+L  & 60 & 180 & 180 &  & 420 \\
+\hline
+M  &    & 180 & 180 &  & 360 \\
+\hline
+Mi & 60 & 180 & 180 &  & 420 \\
+\hline
+J  &    & 180 & 180 &  & 360 \\
+\hline
+V  & 60 & 180 & 180 &  & 420 \\
+\hline
+S  &    & 180 & 180 &  & 360 \\
+\hline
+\textbf{Totales} & 180 & 1260 & 1260 &  & 2700 \\
+\hline
+\end{tabular}
+\chapter{La Gestión de los Compromisos}
+\thispagestyle{empty}
+\section{Análisis}
+Los compromisos que uno hace con las personas a las cuales espera entregar un proyecto, deven ser documentados, mostrando el tipo de actividad a realizar, el dia, los participantes de ese compromiso, la hora en que se realiza, la fecha y finalmente lo que se recive a cambio de la finalización de estas tareas. Es importante destacar que una correcta forma de manejar los compromisos lleva normalemte a un buen plan de trabajo.
+\section{Desarrollo}
+\newpage
+\begin{tabbing}
+\textbf{Estudiante:} \= Miguel Angel Fuenzaldia Pino \= \textbf{Fecha:} \= 19/11/2012\\
+\textbf{Profesor:} \> Sebastián Salazar Molina \> \textbf{Tiempos de Actividad} \>  \\
+\end{tabbing}
+\textbf{Lista de Compromisos}\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Fecha} & \textbf{Compromizo} & \textbf{¿Con quíen?} & \textbf{Horas} & \textbf{Fin} & \textbf{Consigo} \\
+\hline
+D  & Leer       & Propio   & 3 & Dom & Conocimiento \\
+\hline
+L  & Desarrollo & Cliente  & 3 & ... & Título \\
+\hline
+M  & Escribir   & Profesor & 3 & ... & Título \\
+\hline
+Mi & Desarrollo & Cliente  & 3 & ... & Título \\
+\hline
+J  & Reunión    & Profesor & 1 & ... & Información \\
+\hline
+V  & Desarrollo & Cliente  & 3 & ... & Título \\
+\hline
+S  & Escribir   & Profesor & 3 & ... & Título \\
+\hline
+\end{tabular}
+\chapter{La Gestión de las Programaciones}
+\thispagestyle{empty}
+\section{Análisis}
+En un proyecto siempre es nesesario definir las caracteristicas importantes que comprenden la ejecución de cada una de las actividades que se estan desarrollando, por tanto en este proyeto se tiene un registro de los puntos de control, los cuales son las caracteristicas importantes y generales que el desarrollo de este trabajo deven comprender totalmente.
+\section{Desarrollo}
+\newpage
+\textbf{Estudiante}: Miguel Angel Fuenzaldia Pino     \textbf{Fecha}: 9/10/2012\\\\\
+\begin{tabular}{| l | l |}
+\hline
+\multicolumn{2}{|c|}{\textbf{Puntos de Control}}\\
+\hline
+\textbf{Numero} & \textbf{Punto de Control}\\
+\hline
+1 & Desarrollar el Cuaderno de Anotaciones para la Metodología PSP \\
+\hline
+2 & Asistir a reuniones con el profesor encargado del ramo \\
+\hline
+3 & Desarrollar el Sofware que se pide, a traves de los requerimientos conseguidos \\
+\hline
+4 & Escribir un informe de Título en coordinación con lo requerido\\
+\hline
+\end{tabular}
+\chapter{El Plan del Proyecto}
+\thispagestyle{empty}
+\section{Análisis}
+Para generar un plan del proyecto se nesesita tener un resumen de las caracteristicas de como se desarrolla el trabajo, para lo cual se expondrá un molde para generar planes de proyectos, los cuales estiman la cantidad de trabajo que uno puede desarrollar de acuerdo a los trabajos anteriores que ha realizado. Finalmente se mostrará un ejemplo de estimación del tamaño del programa.
+\section{Desarrollo}
+\newpage
+\textbf{Resumen del plan de Proyecto}\\
+\begin{tabular}{| l | l | l | l |}
+\hline
+\textbf{Estudiante:} & Miguel Angel Fuenzaldia Pino & \textbf{Fecha:} & 19/11/2012\\
+\hline
+\textbf{Programa:} & aaaaaaaaaaaaaaaaaaaaaaaaa & \textbf{Programa No.:} & 99\\
+\hline
+\textbf{Profesor:} & Sebastián Salazar Molina & \textbf{Lenguaje} & Java  \\
+\hline
+\end{tabular}
+\\\\\\
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Resumen} & \textbf{Plan} & \multicolumn{2}{|c|}{\textbf{Real}} & \multicolumn{2}{|c|}{\textbf{Hasta la Fecha}} \\
+\hline
+\textit{Minutos/LOC} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{LOC/Hora} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{Defectos/KLOC} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{Rendimiento} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{VIF} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textbf{Tamaño(LOC)} & \multicolumn{5}{|c|}{\textbf{}}\\
+\hline
+\textit{Nuevo y Cambiado} & & \multicolumn{2}{|c|}{\textbf{}} & \multicolumn{2}{|c|}{\textbf{}} \\
+\hline
+\textit{Máx} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\textit{Mín} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\textbf{Fase(Mín)} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \multicolumn{2}{|c|}{\textbf{Porcentaje}} \\
+\hline
+\textit{Planificación} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Diseño} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Codificación} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Revisión} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Compilación} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Pruebas} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Postmortem} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Total} & & & & \multicolumn{2}{|c|}{\textbf{}}\\
+\hline
+\textit{Máx} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\textit{Mín} & & \multicolumn{4}{|c|}{\textbf{}}\\
+\hline
+\end{tabular}
+\newpage
+\begin{tabular}{| l | l | l | l | l | l |}
+\hline
+\textbf{Introducidos} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \textbf{Porcentaje} & \textbf{Def./Hora} \\
+\hline
+\textit{Planificación} & & & & & \\
+\hline
+\textit{Diseño} & & & & & \\
+\hline
+\textit{Codificación} & & & & & \\
+\hline
+\textit{Revisión} & & & & & \\
+\hline
+\textit{Compilación} & & & & & \\
+\hline
+\textit{Pruebas} & & & & & \\
+\hline
+\textit{Total} & & & & & \\
+\hline
+\textbf{Eliminados} & \textbf{Plan} & \textbf{Real} & \textbf{Hasta la Fecha} & \textbf{Porcentaje} & \textbf{Def./Hora} \\
+\hline
+\textit{Planificación} & & & & & \\
+\hline
+\textit{Diseño} & & & & & \\
+\hline
+\textit{Codificación} & & & & & \\
+\hline
+\textit{Revisión} & & & & & \\
+\hline
+\textit{Compilación} & & & & & \\
+\hline
+\textit{Pruebas} & & & & & \\
+\hline
+\textit{Total} & & & & & \\
+\hline
+ & & & & & \\
+\hline
+\end{tabular}
+\chapter{Molde}
+\thispagestyle{empty}
+\section{Diagnóstico sin proyecto}
+Falabella tiene un sistema de asociación de comercios exteriores a su sistema de pagos en linea. Por lo cual es posible convertir la compra de un articulo por medio de internet a una compra exclusiva de la empresa que recibe el producto. El problema consiste en que si hay algún cambio en el protocolo de comercio dentro de Falabella, es necesario cambiar las políticas de compra y venta en todos los comercios adheridos al cliente general. Esto resulta bastante engorroso. 
+\section{Diagnóstico con proyecto}
+Por lo cual se pidió a Orange People la realización de un sistema autónomo que permita la integración de distintos comercios con el sistema de pago de Falabella, pero a su ves que el sistema fuera independiente y este solo envíe una información encriptada que facilita la comunicación a través de un protocolo establecido entre el sistema que el comercio adopta y Falabella. Siendo estas dos aplicaciones totalmente independientes.
+\section{Objetivos Generales y Específicos}
+\subsection{Objetivos Generales}
+\textit{Dessarrollar un sistema de integración para comercios adjuntos a Falabella, el cual permita generar un botón de pagos en internet que sea transparente al comercio y al cliente final, de manera segura y confiable.}
+\begin{enumerate}
+\item La realización de un sistema de compra y venta que adjunte un comercio a compras hechas en Falabella de manera independiente, sin tener que sobre escribir las características y políticas de compra y venta en Falabella.
+\item Generar un producto adecuado que sea fácil de implementar, moderno y confiable para cualquier casa comercial que quiera asociarse con Falabella.
+\item Desarrollar una documentación extensiva que permita realizar un trabajo de Titulo para el alumno que esta trabajando en la organización.
+\end{enumerate}
+\subsection{Objetivos Específicos}
+\begin{enumerate}
+\item Desarrollar un sistema de pagos a través de Falabella que sea totalmente disponible y que permita la integración de múltiples tecnologías ágiles de implementación en distintos puntos.
+\item Generar negocio frente a una gran empresa como lo es Falabella.
+\item Potenciar las capacidades de compra y venta de los clientes asociados que adquieran por partes terceras este producto.
+\item Crear un software que corresponda con características de desarrollo estándares para las buenas practicas y la correcta implementación.
+\item Producir una correcta documentación de las actividades y las características en su totalidad del sistema que se esta estudiando.
+\end{enumerate}
+\end{document}
